@@ -8,7 +8,7 @@ using LanguageServer.Contracts;
 namespace BASICLanguageServer.Services
 {
     [JsonRpcScope(MethodPrefix = "completionItem/")]
-    public class CompletionItemService : DemoLanguageServiceBase
+    public class CompletionItemService : BASICLanguageServiceBase
     {
         // The request is sent from the client to the server to resolve additional information
         // for a given completion item.

@@ -10,7 +10,7 @@ using LanguageServer.Server;
 
 namespace BASICLanguageServer.Services
 {
-    public class DemoLanguageServiceBase : JsonRpcService
+    public class BASICLanguageServiceBase : JsonRpcService
     {
 
         protected LanguageServerSession Session => RequestContext.Features.Get<LanguageServerSession>();

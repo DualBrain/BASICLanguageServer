@@ -10,7 +10,7 @@ using Newtonsoft.Json.Linq;
 namespace BASICLanguageServer.Services
 {
     [JsonRpcScope(MethodPrefix = "workspace/")]
-    public class WorkspaceService : DemoLanguageServiceBase
+    public class WorkspaceService : BASICLanguageServiceBase
     {
         [JsonRpcMethod(IsNotification = true)]
         public async Task DidChangeConfiguration(SettingsRoot settings)

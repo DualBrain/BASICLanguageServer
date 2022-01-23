@@ -13,7 +13,7 @@ using LanguageServer.Server;
 namespace BASICLanguageServer.Services
 {
     [JsonRpcScope(MethodPrefix = "textDocument/")]
-    public class TextDocumentService : DemoLanguageServiceBase
+    public class TextDocumentService : BASICLanguageServiceBase
     {
         [JsonRpcMethod]
         public async Task<Hover> Hover(TextDocumentIdentifier textDocument, Position position, CancellationToken ct)

@@ -9,7 +9,7 @@ using Newtonsoft.Json.Linq;
 
 namespace BASICLanguageServer.Services
 {
-    public class InitializationService : DemoLanguageServiceBase
+    public class InitializationService : BASICLanguageServiceBase
     {
 
         [JsonRpcMethod(AllowExtensionData = true)]
