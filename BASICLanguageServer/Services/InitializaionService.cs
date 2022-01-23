@@ -6,6 +6,7 @@ using JsonRpc.Messages;
 using JsonRpc.Server;
 using LanguageServer.Contracts;
 using Newtonsoft.Json.Linq;
+using BASICLanguageParser;
 
 namespace BASICLanguageServer.Services
 {
