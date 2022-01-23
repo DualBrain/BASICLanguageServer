@@ -5,7 +5,7 @@ VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LanguageServer", "LanguageServer\LanguageServer.csproj", "{E76B21BE-03FF-40AB-B2E8-EDAFD46C0A08}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BASICLanguageServer", "DemoLanguageServer\BASICLanguageServer.csproj", "{8A3AE163-D3F2-451D-AC81-100923E98FCD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BASICLanguageServer", "BASICLanguageServer\BASICLanguageServer.csproj", "{8A3AE163-D3F2-451D-AC81-100923E98FCD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
