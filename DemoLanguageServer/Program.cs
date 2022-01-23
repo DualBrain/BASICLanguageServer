@@ -6,6 +6,7 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Threading;
+using BASICLanguageServer;
 using JsonRpc.Client;
 using JsonRpc.Contracts;
 using JsonRpc.Server;
@@ -14,7 +15,7 @@ using LanguageServer;
 using LanguageServer.Contracts;
 using Microsoft.Extensions.Logging;
 
-namespace DemoLanguageServer
+namespace BASICLanguageServer
 {
     static class Program
     {

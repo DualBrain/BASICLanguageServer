@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using BASICLanguageServer;
 using JsonRpc.Contracts;
 using JsonRpc.Server;
 using LanguageServer;
 using LanguageServer.Contracts;
 using LanguageServer.Server;
 
-namespace DemoLanguageServer.Services
+namespace BASICLanguageServer.Services
 {
     [JsonRpcScope(MethodPrefix = "textDocument/")]
     public class TextDocumentService : DemoLanguageServiceBase

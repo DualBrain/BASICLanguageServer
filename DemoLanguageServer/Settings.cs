@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace DemoLanguageServer
+namespace BASICLanguageServer
 {
 
     public class SettingsRoot
     {
-        public LanguageServerSettings DemoLanguageServer { get; set; }
+        public LanguageServerSettings BASICLanguageServer { get; set; }
     }
 
     public class LanguageServerSettings

@@ -7,7 +7,7 @@ using JsonRpc.Contracts;
 using LanguageServer.Contracts;
 using Newtonsoft.Json.Linq;
 
-namespace DemoLanguageServer.Services
+namespace BASICLanguageServer.Services
 {
     [JsonRpcScope(MethodPrefix = "workspace/")]
     public class WorkspaceService : DemoLanguageServiceBase
@@ -15,7 +15,7 @@ namespace DemoLanguageServer.Services
         [JsonRpcMethod(IsNotification = true)]
         public async Task DidChangeConfiguration(SettingsRoot settings)
         {
-            Session.Settings = settings.DemoLanguageServer;
+            Session.Settings = settings.BASICLanguageServer;
             foreach (var doc in Session.Documents.Values)
             {
                 var diag = Session.DiagnosticProvider.LintDocument(doc.Document, Session.Settings.MaxNumberOfProblems);

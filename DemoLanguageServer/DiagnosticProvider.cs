@@ -5,7 +5,7 @@ using LanguageServer.Contracts;
 using LanguageServer.Server;
 using Range = LanguageServer.Contracts.Range;
 
-namespace DemoLanguageServer
+namespace BASICLanguageServer
 {
     public class DiagnosticProvider
     {
@@ -14,7 +14,7 @@ namespace DemoLanguageServer
         {
 
         }
-        
+
         private static readonly string[] Keywords =
             {".NET Framework", ".NET Core", ".NET Standard", ".NET Compact", ".NET"};
 

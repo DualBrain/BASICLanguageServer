@@ -11,8 +11,9 @@ using JsonRpc.Server;
 using LanguageServer.Contracts;
 using LanguageServer.Contracts.Client;
 using LanguageServer.Server;
+using BASICLanguageServer;
 
-namespace DemoLanguageServer
+namespace BASICLanguageServer
 {
     public class LanguageServerSession
     {
@@ -21,7 +22,7 @@ namespace DemoLanguageServer
         public LanguageServerSession(JsonRpcClient rpcClient, IJsonRpcContractResolver contractResolver)
         {
             RpcClient = rpcClient ?? throw new ArgumentNullException(nameof(rpcClient));
-            var builder = new JsonRpcProxyBuilder {ContractResolver = contractResolver};
+            var builder = new JsonRpcProxyBuilder { ContractResolver = contractResolver };
             Client = new ClientProxy(builder, rpcClient);
             Documents = new ConcurrentDictionary<Uri, SessionDocument>();
             DiagnosticProvider = new DiagnosticProvider();
@@ -80,7 +81,7 @@ namespace DemoLanguageServer
             if (updateChangesDelayTask == null || updateChangesDelayTask.IsCompleted)
             {
                 updateChangesDelayTask = Task.Delay(RenderChangesDelay);
-                updateChangesDelayTask.ContinueWith(t => Task.Run((Action)MakeChanges));
+                updateChangesDelayTask.ContinueWith(t => Task.Run(MakeChanges));
             }
         }
 

@@ -7,7 +7,7 @@ using JsonRpc.Server;
 using LanguageServer.Contracts;
 using Newtonsoft.Json.Linq;
 
-namespace DemoLanguageServer.Services
+namespace BASICLanguageServer.Services
 {
     public class InitializationService : DemoLanguageServiceBase
     {

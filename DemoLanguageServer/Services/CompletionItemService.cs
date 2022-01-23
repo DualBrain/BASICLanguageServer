@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using JsonRpc.Contracts;
 using LanguageServer.Contracts;
 
-namespace DemoLanguageServer.Services
+namespace BASICLanguageServer.Services
 {
     [JsonRpcScope(MethodPrefix = "completionItem/")]
     public class CompletionItemService : DemoLanguageServiceBase

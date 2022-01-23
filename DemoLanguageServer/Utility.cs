@@ -4,7 +4,7 @@ using System.Text;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 
-namespace DemoLanguageServer
+namespace BASICLanguageServer
 {
     internal static class Utility
     {

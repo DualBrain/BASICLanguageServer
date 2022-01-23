@@ -2,12 +2,13 @@
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Text;
+using BASICLanguageServer;
 using JsonRpc.Server;
 using LanguageServer.Contracts;
 using LanguageServer.Contracts.Client;
 using LanguageServer.Server;
 
-namespace DemoLanguageServer.Services
+namespace BASICLanguageServer.Services
 {
     public class DemoLanguageServiceBase : JsonRpcService
     {
