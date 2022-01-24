@@ -4,6 +4,7 @@ using System.Text;
 using LanguageServer.Contracts;
 using LanguageServer.Server;
 using Range = LanguageServer.Contracts.Range;
+using BASICLanguageParser.ColorBasic;
 
 namespace BASICLanguageServer
 {
@@ -22,6 +23,9 @@ namespace BASICLanguageServer
         {
             var diag = new List<Diagnostic>();
             var content = document.Content;
+            var colorBasicInputs = new ColorBasicInputs(document.Content);
+            
+
             if (string.IsNullOrWhiteSpace(content))
             {
                 diag.Add(new Diagnostic(DiagnosticSeverity.Hint,
