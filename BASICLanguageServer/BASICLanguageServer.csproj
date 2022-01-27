@@ -41,4 +41,13 @@
     </Reference>
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="References\BASICLanguageParser.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="References\BASICLanguageParser.pdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
