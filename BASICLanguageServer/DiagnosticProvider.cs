@@ -24,7 +24,7 @@ namespace BASICLanguageServer
             var diag = new List<Diagnostic>();
             var content = document.Content;
             var colorBasicInputs = new ColorBasicParserEvaluator();
-            var parserResults = colorBasicInputs.ParseDocument(document.Content);
+            var parserResults = colorBasicInputs.ParseDocument(content);
             if (parserResults.ErrorCount == 0) return diag;
             foreach(string errorItem in parserResults.LexerErrorList)
             {

@@ -38,11 +38,14 @@ namespace BASICLanguageServer.Services
         {
             var doc = new SessionDocument(textDocument);
             var session = Session;
+            //await Client.Window.LogMessage(MessageType.Log, "TextDocumentService.DidOpen " + doc?.Document?.Content?.Length);
             doc.DocumentChanged += async (sender, args) =>
             {
                 // Lint the document when it's changed.
+                //await Client.Window.LogMessage(MessageType.Log, "TextDocumentService.DocumentChanged " + doc?.Document?.Content?.Length);
                 var doc1 = ((SessionDocument) sender).Document;
                 var diag1 = session.DiagnosticProvider.LintDocument(doc1, session.Settings.MaxNumberOfProblems);
+                //await Client.Window.LogMessage(MessageType.Log, "TextDocumentService.DocumentChanged diagnostic" + diag1?.Count);
                 if (session.Documents.ContainsKey(doc1.Uri))
                 {
                     // In case the document has been closed when we were linting…
@@ -51,6 +54,7 @@ namespace BASICLanguageServer.Services
             };
             Session.Documents.TryAdd(textDocument.Uri, doc);
             var diag = Session.DiagnosticProvider.LintDocument(doc.Document, Session.Settings.MaxNumberOfProblems);
+            //await Client.Window.LogMessage(MessageType.Log, "TextDocumentService.DocumentChanged diagnostic" + diag?.Count);
             await Client.Document.PublishDiagnostics(textDocument.Uri, diag);
         }
 
