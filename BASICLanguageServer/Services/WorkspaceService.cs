@@ -34,16 +34,16 @@ namespace BASICLanguageServer.Services
                 if (!change.Uri.IsFile) continue;
                 var localPath = change.Uri.AbsolutePath;
                 //await Client.Window.LogMessage(MessageType.Log, "WorkspaceService.DidChangeWatchedFiles localPath " + localPath);
-                if (string.Equals(Path.GetExtension(localPath), ".demo"))
-                {
-                    // If the file has been removed, we will clear the lint result about it.
-                    // Note that pass null to PublishDiagnostics may mess up the client.
-                    //await Client.Window.LogMessage(MessageType.Log, "WorkspaceService.DidChangeWatchedFiles ChangeType " + change?.Type);
-                    if (change.Type == FileChangeType.Deleted)
-                    {
-                        await Client.Document.PublishDiagnostics(change.Uri, new Diagnostic[0]);
-                    }
-                }
+                //if (string.Equals(Path.GetExtension(localPath), ".demo"))
+                //{
+                //    // If the file has been removed, we will clear the lint result about it.
+                //    // Note that pass null to PublishDiagnostics may mess up the client.
+                //    //await Client.Window.LogMessage(MessageType.Log, "WorkspaceService.DidChangeWatchedFiles ChangeType " + change?.Type);
+                //    if (change.Type == FileChangeType.Deleted)
+                //    {
+                //        await Client.Document.PublishDiagnostics(change.Uri, new Diagnostic[0]);
+                //    }
+                //}
             }
         }
     }

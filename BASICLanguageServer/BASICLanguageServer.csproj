@@ -17,8 +17,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="out\**" />
     <Compile Remove="_private\**" />
+    <EmbeddedResource Remove="out\**" />
     <EmbeddedResource Remove="_private\**" />
+    <None Remove="out\**" />
     <None Remove="_private\**" />
   </ItemGroup>
 
@@ -49,5 +52,13 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="if not exist $(ProjectDir)\out mkdir $(ProjectDir)\out&#xD;&#xA;xcopy &quot;$(OutDir)*.dll&quot; &quot;$(ProjectDir)out&quot; /Y&#xD;&#xA;xcopy &quot;$(OutDir)*.pdb&quot; &quot;$(ProjectDir)out&quot; /Y&#xD;&#xA;xcopy &quot;$(OutDir)*.json&quot; &quot;$(ProjectDir)out&quot; /Y&#xD;&#xA;xcopy &quot;$(OutDir)*.xml&quot; &quot;$(ProjectDir)out&quot; /Y&#xD;&#xA;&#xD;&#xA;xcopy &quot;$(ProjectDir)out\*.*&quot; &quot;C:\Users\Stephen\VS Code Projects\coco3-extended-color-basic-vscode\BASICLanguageServer\bin\Debug\net5.0&quot; /Y" />
+  </Target>
+
+  <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
+    <Exec Command="xcopy &quot;C:\Users\Stephen\source\repos\BASICLanguageParser\BASICLanguageParser\out\*.*&quot; &quot;$(ProjectDir)References&quot; /Y" />
+  </Target>
 
 </Project>
